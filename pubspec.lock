@@ -65,7 +65,7 @@ packages:
     source: hosted
     version: "1.1.1"
   cloud_firestore:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: cloud_firestore
       url: "https://pub.dartlang.org"
@@ -114,7 +114,7 @@ packages:
     source: hosted
     version: "1.1.2"
   desktop_webview_auth:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: desktop_webview_auth
       url: "https://pub.dartlang.org"
@@ -219,7 +219,7 @@ packages:
     source: hosted
     version: "1.7.2"
   firebase_database:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: firebase_database
       url: "https://pub.dartlang.org"
@@ -512,7 +512,7 @@ packages:
     source: hosted
     version: "3.1.0"
   sign_in_with_apple:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: sign_in_with_apple
       url: "https://pub.dartlang.org"
