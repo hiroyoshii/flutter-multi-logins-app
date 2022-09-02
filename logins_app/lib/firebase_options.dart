@@ -27,15 +27,9 @@ class DefaultFirebaseOptions {
       case TargetPlatform.macOS:
         return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for linux - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return linux;
       default:
         throw UnsupportedError(
           'DefaultFirebaseOptions are not supported for this platform.',
@@ -78,5 +72,23 @@ class DefaultFirebaseOptions {
     storageBucket: 'logins-app-6ef63.appspot.com',
     iosClientId: '760455727775-ugr91qm534cosic4k6o5j3b93euti85a.apps.googleusercontent.com',
     iosBundleId: 'com.hiroyoshii.loginsApp',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyDHi9Zf1awLxaC8qiDQnsCZ5tyVjNUFxTg',
+    appId: '1:760455727775:web:ac9c281216771f9d6eb0aa',
+    messagingSenderId: '760455727775',
+    projectId: 'logins-app-6ef63',
+    authDomain: 'logins-app-6ef63.firebaseapp.com',
+    storageBucket: 'logins-app-6ef63.appspot.com',
+  );
+
+  static const FirebaseOptions linux = FirebaseOptions(
+    apiKey: 'AIzaSyDHi9Zf1awLxaC8qiDQnsCZ5tyVjNUFxTg',
+    appId: '1:760455727775:web:db5188317547be016eb0aa',
+    messagingSenderId: '760455727775',
+    projectId: 'logins-app-6ef63',
+    authDomain: 'logins-app-6ef63.firebaseapp.com',
+    storageBucket: 'logins-app-6ef63.appspot.com',
   );
 }

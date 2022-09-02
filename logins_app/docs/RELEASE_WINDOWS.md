@@ -1,39 +1,31 @@
-
+# change version
+- pubsub.yaml
 ```
-flutter build web
-```
-
-# Firebase Hosting
-- setting
-```
-firebase init hosting
-```
-※ public directory を build/web に変更する。下記 firebase.json ができる。
-```
-{
-  "hosting": {
-    "public": "build/web",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  }
-}
+version: 1.0.0+1
 ```
 
-- staging
+# add desktop library
 ```
-firebase deploy --only hosting
+flutter pub add firebase_core_desktop
 ```
 
-## preview
 ```
-firebase hosting:channel:deploy preview
+flutterfire configure
+```
+
+```
+dart pub add firebase_auth_desktop
+```
+
+windows の firebase_auth support がない？
+
+# msix settings
+https://docs.flutter.dev/development/platform-integration/windows/building
+
+```
+flutter pub add --dev msix
+```
+
+```
+flutter pub run msix:create
 ```
