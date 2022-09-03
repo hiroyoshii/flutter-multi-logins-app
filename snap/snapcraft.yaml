@@ -1,28 +1,35 @@
-name: login-app
+name: logins-app
 version: 0.1.0
-summary: Login App
-description: Login App that does everything!
+summary: Logins App
+description: Logins App that does everything!
 
 confinement: strict
 base: core18
 grade: stable
 
 slots:
-  dbus-login-app: # adjust accordingly to your app name
+  dbus-logins-app: # adjust accordingly to your app name
     interface: dbus
     bus: session
-    name: org.bar.super_cool_app # adjust accordingly to your app name and
+    name: org.bar.logins_app # adjust accordingly to your app name and
     
 apps:
-  login-app:
-    command: super_cool_app
+  logins-app:
+    command: logins_app
     extensions: [flutter-master] # Where "master" defines which Flutter channel to use for the build
     plugs:
     - network
     slots:
-      - dbus-login-app
+      - dbus-logins-app
 parts:
-  login-app:
+  logins-app:
     source: .
     plugin: flutter
     flutter-target: lib/main.dart # The main entry-point file of the application
+    override-build: |
+      set -ex
+      # install yarn
+      apt-get update
+      apt-get install -y libwebkit2gtk-4.0-dev
+      flutter build linux --release -v -t lib/main.dart
+      cp -r ./build/linux/x64/release/bundle/ .

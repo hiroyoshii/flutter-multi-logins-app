@@ -1,7 +1,0 @@
-  [Desktop Entry]
-  Name=Login App
-  Comment=Login App that does everything
-  Exec=login-app 
-  Terminal=false
-  Type=Application
-  Categories=Education; #adjust accordingly your snap category
