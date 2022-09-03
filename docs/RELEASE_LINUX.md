@@ -15,3 +15,13 @@ sudo apt-get update && sudo apt-get install -yqq daemonize dbus-user-session fon
 ```
 sudo snap install snapcraft --classic
 ```
+
+```
+sudo snap install multipass --classic
+```
+
+```
+snapcraft
+```
+
+multipass がダメ？
