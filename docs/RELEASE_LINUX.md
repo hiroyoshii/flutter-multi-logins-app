@@ -25,3 +25,26 @@ snapcraft
 ```
 
 multipass がダメ？
+
+
+# build
+
+```
+git clone https://github.com/flutter/flutter
+sudo mv flutter /usr/local/
+export PATH=$PATH:/usr/local/flutter/bin
+```
+
+```
+sudo apt install clang curl pkg-config ninja-build cmake libgtk-3-dev libblkid-dev liblzma-dev unzip
+```
+
+sudo apt-get install libwebkit2gtk-4.0-dev
+
+```
+flutter config --enable-linux-desktop
+```
+
+```
+flutter run -d linux
+```
