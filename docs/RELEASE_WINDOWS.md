@@ -31,4 +31,5 @@ flutter pub run msix:create
 ```
 
 ```
-cp build/app/runner/
+cp build/windows/runner/Release/logins_app.msix assets/applications/
+```
