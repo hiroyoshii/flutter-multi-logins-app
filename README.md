@@ -12,15 +12,15 @@ A flutter login app for all supported platform(Android/iOS/MacOS/Linux/Windows/W
   - macos: assets/applications/logins_app.app.zip
 - mobile:
   - android: assets/applications/app-armeabi-v7a-release.apk
-  - ios: 
+  - ios: assets/applications/Runner.app.zip
 
 ## Release Process
-### Enable Vonfig
+### Enable Config
 ```
 flutter config --enable-macos-desktop
 flutter config --enable-windows-desktop
-flutter config --enable-macos-desktop
 flutter config --enable-linux-desktop
+flutter config --enable-web
 flutter config --enable-android
 flutter config --enable-ios
 ```
