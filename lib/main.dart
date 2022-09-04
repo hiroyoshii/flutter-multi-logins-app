@@ -1,10 +1,5 @@
-import 'dart:io';
-
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_auth_desktop/firebase_auth_desktop.dart';
-import 'package:firebase_auth_platform_interface/firebase_auth_platform_interface.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutterfire_ui/auth.dart';
 import 'package:logins_app/firebase_options.dart';
@@ -37,38 +32,24 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (kIsWeb) {
-      return StreamBuilder<User?>(
-        stream: FirebaseAuth.instance.authStateChanges(),
-        builder: _login,
-      );
-    }
-    if (Platform.isWindows) {
-      return StreamBuilder<UserPlatform?>(
-        stream: FirebaseAuthDesktop.instance.authStateChanges(),
-        builder: _login,
-      );
-    }
     return StreamBuilder<User?>(
       stream: FirebaseAuth.instance.authStateChanges(),
       builder: _login,
     );
   }
 
-  Widget _login(BuildContext contexnt, AsyncSnapshot<dynamic> snapshot) {
+  Widget _login(BuildContext contexnt, AsyncSnapshot<User?> snapshot) {
     if (snapshot.hasData) {
-      // ユーザーがサインインしている場合
       return const Scaffold(
         body: Center(child: Text("Login Succeeded")),
       );
     } else {
-      // ユーザーがサインインしてない場合
       return const SignInScreen(
         providerConfigs: [
-          // 使用したい認証方法をここに追加する
           EmailProviderConfiguration(),
           GoogleProviderConfiguration(
-            clientId: '',
+            clientId:
+                '760455727775-rfsvps5v0g1hc4vn0o6aiaaifncqtvpq.apps.googleusercontent.com',
           ),
         ],
       );
