@@ -1,0 +1,3 @@
+- [ ] android, ios の package 化
+- [ ] github action に build & release を載せる
+- [ ] 
