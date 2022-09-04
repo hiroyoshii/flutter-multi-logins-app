@@ -1,7 +1,18 @@
 # logins_app
 [![Codemagic build status](https://api.codemagic.io/apps/6312170c2923d8020df57458/6312170c2923d8020df57457/status_badge.svg)](https://codemagic.io/apps/6312170c2923d8020df57458/6312170c2923d8020df57457/latest_build)
 
-A multi-platform login app.
+A flutter login app for all supported platform(Android/iOS/MacOS/Linux/Windows/Web).
+
+## Applications
+- web:
+  - web: https://logins-app-6ef63.web.app/#/
+- desktop:
+  - windows: assets/applications/logins_app.msix
+  - linux: assets/applications/logins-app_0.1.0_amd64.snap
+  - macos: assets/applications/logins_app.app.zip
+- mobile:
+  - android: assets/applications/app-armeabi-v7a-release.apk
+  - ios: 
 
 ## Release Process
 ### Enable Vonfig
@@ -18,13 +29,8 @@ flutter config --enable-ios
 - [Release Windows App](./docs/RELEASE_WINDOWS.md)
 - [Release Browser App](./docs/RELEASE_BROWSER.md)
 - [Release Android App](./docs/RELEASE_ANDROID.md)
-- codemagic deploy
+- [Release Linux App](./docs/RELEASE_LINUX.md)
+- Release by codemagic 
   - Mac App
-- Release iOS App
-- Release Linux App
+  - iOS App
 
-https://codemagic.io/app/6312170c2923d8020df57458/workflow/6312170c2923d8020df57457/settings
-
-## Download / Visit App
-- web: https://logins-app-6ef63.web.app/#/
-- windows: assets/applications/logins_app.msix

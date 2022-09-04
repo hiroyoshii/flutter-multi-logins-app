@@ -1,31 +1,28 @@
 https://docs.flutter.dev/deployment/linux
 
-# wsl で
-## snap install
-```
-sudo apt-get update && sudo apt-get install -yqq daemonize dbus-user-session fontconfig
- sudo daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
- exec sudo nsenter -t $(pidof systemd) -a su - $LOGNAME
- 
- snap version
-```
-
+# ec2 
+- t2.medium
+  - RAM が足りないと失敗する
+- ubuntu
+- 30GiB storage
 
 ## install
+- check snap installation
+```
+ snap version
+```
+- add package
 ```
 sudo snap install snapcraft --classic
 ```
-
+- create package env
 ```
-sudo snap install multipass --classic
+sudo lxd init
 ```
-
+- package application
 ```
-snapcraft
+snapcraft --use-lxd
 ```
-
-multipass がダメ？
-
 
 # build
 
@@ -48,3 +45,4 @@ flutter config --enable-linux-desktop
 ```
 flutter run -d linux
 ```
+
