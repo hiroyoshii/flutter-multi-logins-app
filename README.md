@@ -6,8 +6,8 @@ A flutter login app for all supported platform(Android/iOS/MacOS/Linux/Windows/W
 Login interface is implemented by [flutterfire-ui](https://github.com/firebase/flutterfire/tree/master/packages/flutterfire_ui).
 
 ## Applications
-| Web           | Android     | iOS      | Windows       |  MacOS        |  Linux(snapcraft)   | 
-| ------------- |-------------| ---------| ------------- | ------------- | ------------------- |
+| Web           | Android     | iOS      | Windows       |  MacOS        |  Linux<br>(snapcraft)   | 
+| :-----------: | :---------: | :------: | :-----------: | :-----------: | :---------------------: |
 | [View on Web](https://logins-app-6ef63.web.app/#/) | [<img src="assets\images\android.png"  width="50">](assets/applications/app-armeabi-v7a-release.apk) | [<img src="assets\images\ios.png"  width="50">](assets/applications/Runner.app.zip) | [<img src="assets\images\windows.png"  width="50">](assets/applications/logins_app.msix) | [<img src="assets\images\mac.png"  width="50">](assets/applications/logins_app.app.zip) |[<img src="assets\images\linux-snapcraft.png" width="50">](assets/applications/logins-app_0.1.0_amd64.snap) |
 
 
